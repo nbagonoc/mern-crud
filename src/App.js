@@ -5,11 +5,12 @@ import store from "./store";
 
 // COMPONENTS
 import Navbar from "./components/layout/Navbar";
-import Games from "./components/games/Games";
-// import Create from "./components/games/Create";
-import CreateForm from "./components/games/CreateForm";
-// import Edit from "./components/games/Edit";
-import EditForm from "./components/games/EditForm";
+import Item from "./components/items/Item";
+import Items from "./components/items/Items";
+// import Create from "./components/items/Create";
+import CreateForm from "./components/items/CreateForm";
+// import Edit from "./components/items/Edit";
+import EditForm from "./components/items/EditForm";
 import Home from "./components/home/Home";
 import NotFound from "./components/NotFound";
 
@@ -25,11 +26,12 @@ class App extends Component {
             <div className="container my-3">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/games" component={Games} />
-                {/* <Route exact path="/games/create" component={Create} /> */}
-                <Route exact path="/games/create" component={CreateForm} />
-                {/* <Route exact path="/games/edit/:id" component={Edit} /> */}
-                <Route exact path="/games/edit/:id" component={EditForm} />
+                <Route exact path="/item/:id" component={Item} />
+                <Route exact path="/items" component={Items} />
+                {/* <Route exact path="/items/create" component={Create} /> */}
+                <Route exact path="/items/create" component={CreateForm} />
+                {/* <Route exact path="/items/edit/:id" component={Edit} /> */}
+                <Route exact path="/items/edit/:id" component={EditForm} />
                 <Route component={NotFound} />
               </Switch>
             </div>

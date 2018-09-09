@@ -1,6 +1,10 @@
-export const GET_GAMES = "GET_GAMES";
-export const GET_GAME = "GET_GAME";
-export const CREATE_GAME = "CREATE_GAME";
-export const EDIT_GAME = "EDIT_GAME";
-export const DELETE_GAME = "DELETE_GAME";
-export const LOADING = "LOADING";
+export const GET_ITEMS = "GET_ITEMS";
+export const GET_ITEM = "GET_ITEM";
+export const CLEAR_ITEMS = "CLEAR_ITEMS";
+export const CLEAR_ITEM = "CLEAR_ITEM";
+export const EDIT_ITEM = "EDIT_ITEM";
+export const DELETE_ITEM = "DELETE_ITEM";
+export const GET_ERRORS = "GET_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const SET_LOADING = "SET_LOADING";
+export const OFF_LOADING = "OFF_LOADING";

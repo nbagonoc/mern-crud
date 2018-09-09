@@ -7,7 +7,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-light bg-light border-bottom">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            MERN CRUD 2
+            REACT CRUD
           </Link>
           <button
             className="navbar-toggler hidden-lg-up"
@@ -23,12 +23,12 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/games">
-                  Games
+                <Link className="nav-link" to="/items">
+                  Items
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/games/create">
+                <Link className="nav-link" to="/items/create">
                   Create
                 </Link>
               </li>

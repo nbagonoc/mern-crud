@@ -4,7 +4,7 @@ class Home extends Component {
   render() {
     return (
       <div className="jumbotron">
-        <h1>MEAN CRUD</h1>
+        <h1>REACT CRUD</h1>
         <h3 className="font-weight-light">
           React + Redux Application Connected to a Node+Express backend RESTful
           API.

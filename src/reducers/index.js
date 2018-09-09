@@ -1,6 +1,10 @@
 import { combineReducers } from "redux";
-import gameReducers from "./gameReducers";
+import itemReducers from "./itemReducers";
+import errorReducers from "./errorReducers";
+import loadingReducers from "./loadingReducers";
 
 export default combineReducers({
-  game: gameReducers
+  item: itemReducers,
+  errors: errorReducers,
+  loading: loadingReducers
 });
