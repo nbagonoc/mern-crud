@@ -31,20 +31,31 @@ class ItemsList extends Component {
         {loading === true ? (
           <Spinner />
         ) : (
-          <div className="row">
-            {items.map(({ _id, name, weight, size }) => (
-              <div key={_id} className="col-md-4 px-md-2 mb-3">
-                <div className="card">
-                  <div className="card-body">
-                    <Link to={`/item/${_id}`}>
-                      <h3 className="text-dark text-capitalize">{name}</h3>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Size</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {items.map(({ _id, name, weight, size }) => (
+                <tr key={_id}>
+                  <td class="text-capitalize">{name}</td>
+                  <td>{weight}</td>
+                  <td>{size}</td>
+                  <td>
+                    <Link
+                      to={`/items/show/${_id}`}
+                      class="btn btn-outline-secondary btn-sm mr-1"
+                    >
+                      View
                     </Link>
-                    <p className="mb-0">{weight}</p>
-                    <p className="mb-0">{size}</p>
-                    <hr />
                     <Link
                       to={`/items/edit/${_id}`}
-                      className="btn btn-success btn-sm mr-1"
+                      class="btn btn-outline-secondary btn-sm mr-1"
                     >
                       Edit
                     </Link>
@@ -54,11 +65,11 @@ class ItemsList extends Component {
                     >
                       Delete
                     </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </div>
     );

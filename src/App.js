@@ -7,9 +7,7 @@ import store from "./store";
 import Navbar from "./components/layout/Navbar";
 import Item from "./components/items/Item";
 import Items from "./components/items/Items";
-// import Create from "./components/items/Create";
 import CreateForm from "./components/items/CreateForm";
-// import Edit from "./components/items/Edit";
 import EditForm from "./components/items/EditForm";
 import Home from "./components/home/Home";
 import NotFound from "./components/NotFound";
@@ -26,11 +24,9 @@ class App extends Component {
             <div className="container my-3">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/item/:id" component={Item} />
                 <Route exact path="/items" component={Items} />
-                {/* <Route exact path="/items/create" component={Create} /> */}
+                <Route exact path="/items/show/:id" component={Item} />
                 <Route exact path="/items/create" component={CreateForm} />
-                {/* <Route exact path="/items/edit/:id" component={Edit} /> */}
                 <Route exact path="/items/edit/:id" component={EditForm} />
                 <Route component={NotFound} />
               </Switch>
